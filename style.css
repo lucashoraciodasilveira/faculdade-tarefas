@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+
+
+* {
+    /* Regra geral: zera margens e paddings, 
+           define box-sizing para facilitar o controle do tamanho dos elementos */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.quantico-regular {
+    /* Fonte importada do Google Fonts */
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    /* Borda apenas na parte de baixo */
+    border-bottom: solid 4px transparent;
+
+    /* Uso de border-image com gradiente radial para criar um efeito de cor */
+    border-image: radial-gradient(circle, rgba(0, 140, 255, 0.5), #000000) 1;
+    background: linear-gradient(to right, #0d1b2a,
+            #1b263b);
+    box-shadow: 3px 0px 4px rgba(255, 255, 255, 0.233);
+}
+
+header>h1 {
+    /* Centraliza o título */
+    text-align: center;
+    margin-top: 25px;
+    font-size: 2em;
+    font-family: 'quantico';
+
+    /* Sombra para dar destaque ao texto */
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+
+    /* Cor do título */
+    color: #f0f0f0;
+}
+
+#tarefas {
+    /* Uso de flexbox para organizar os cards lado a lado */
+    display: flex;
+    flex-wrap: wrap;
+    /* permite quebra de linha */
+    justify-content: center;
+    /* centraliza no container */
+    gap: 10px;
+    /* espaço entre os cards */
+}
+
+.tarefa {
+    /* Gradiente no fundo dos cards */
+    background-image: linear-gradient(to top, #1e1e1e, #2c3e50);
+
+    /* Espaçamentos e tamanho fixo dos cards */
+    margin: 15px;
+    padding: 20px;
+    width: 400px;
+    height: 250px;
+
+    /* Borda arredondada */
+    border: 1px solid #00aaff;
+    border-radius: 20px;
+
+    /* Sombra suave para destacar no fundo escuro */
+    box-shadow: 0 .4px 0px rgb(255, 255, 255);
+}
+
+h2 {
+    /* Títulos das tarefas */
+    text-decoration: underline;
+    font-style: oblique;
+    color: #e0e0e0;
+}
+
+p {
+    /* Texto das descrições */
+    text-align: justify;
+    color: #cccccc;
+}
+
+body {
+    /* Cor de fundo da página */
+    background-image: radial-gradient(circle, rgb(3, 3, 48), rgb(0, 0, 20));
+}
+
+.descricao {
+    /* Espaçamento abaixo da descrição */
+    margin-bottom: 10px;
+}
+
+.concluida {
+    /* Estilo para tarefa concluída */
+    color: #2ecc71;
+    text-shadow: 1px 1px 2px #000000;
+    font-size: 1.5em;
+    text-decoration: line-through;
+}
+
+.em-processo {
+    /* Estilo para tarefa em andamento */
+    color: #f1c40f;
+    text-shadow: 1px 1px 2px #000000;
+    font-size: 1.5em;
+}
+
+.pendente {
+    /* Estilo para tarefa pendente */
+    color: #e74c3c;
+    text-shadow: 1px 1px 2px #000000;
+    font-size: 1.5em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    border-top: solid 4px transparent;
+    border-image: radial-gradient(circle, rgba(4, 5, 58, 0.767), rgba(0, 0, 255, 0))1;
+}
+
+footer>h3 {
+    text-shadow: 1px 1px 0px rgba(17, 0, 255, 0.322);
+    color: #ffffff;
+}
